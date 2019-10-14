@@ -1,0 +1,97 @@
+:root{
+    --background-color: #110D18;
+    --text-color: #18a3f1;
+    --text-shadow: #24f0f5;
+    --gradient1: #1a1a1a10;
+    --gradient2: #00000010;
+    --btn-background: #00000030;
+}
+
+* {
+    overflow: hidden;
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: 'Press Start 2P', cursive;
+}
+
+h2{
+    color: var(--text-color);
+    font-size: 2rem;
+    text-shadow: 2px 2px var(--text-shadow);
+}
+
+.main-container{
+    height: 95vh;
+    background-image:
+    linear-gradient(to right bottom, var(--gradient1), var(--gradient2)),
+    url('../img/background.gif');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(32% 11%, 98% 25%, 92% 76%, 68% 93%, 12% 86%, 2% 32%);
+}
+
+.element-area{
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 36%;
+    left: -15%;
+}
+
+ul{
+    margin-top: 40px;
+    list-style: none;
+    padding: 0.4rem;
+}
+
+ul a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+li{
+    margin-left: 11px;
+    margin-right: 11px;
+    border: 2px solid var(--text-color);
+    background-color: var(--btn-background);
+    display: inline-block;
+    padding: 1rem;
+    transition: transform 1s;
+    box-sizing: border-box;
+}
+
+li:hover{
+    transform: scale(1.07);
+}
+
+.btn1{
+    opacity: 0;
+    animation-name: btnFadeIn;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.btn2{
+    opacity: 0;
+    animation-name: btnFadeIn;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.btn3{
+    opacity: 0;
+    animation-name: btnFadeIn;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btnFadeIn{
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
